@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>English Buddy - はじめての英語学習サポート</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="hero__eyebrow">はじめてのプログラミングで作る英語学習サイト</p>
+        <h1>English Buddy</h1>
+        <p class="hero__lead">
+          日常会話・ビジネス・IT用語まで、これからの英語学習をまとめてサポート。
+        </p>
+        <div class="hero__actions">
+          <button class="primary" type="button" id="start-plan">今日の学習プランを見る</button>
+          <button class="ghost" type="button" id="shuffle-card">フラッシュカードを切り替え</button>
+        </div>
+      </div>
+      <figure class="hero__media">
+        <img src="assets/hero-illustration.svg" alt="英語学習の進捗をまとめたダッシュボードのイメージ" />
+      </figure>
+      <div class="hero__card" id="flashcard">
+        <p class="card__label" id="card-tag">Daily</p>
+        <h2 id="card-term">Nice to meet you.</h2>
+        <p id="card-meaning">はじめまして。</p>
+        <p class="card__hint" id="card-hint">シーン: 自己紹介</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="grid">
+        <article>
+          <h3>1. 日常会話の土台</h3>
+          <ul>
+            <li>朝・昼・夜のあいさつ</li>
+            <li>相づちとリアクション</li>
+            <li>短い自己紹介</li>
+          </ul>
+          <p class="note">まずは「言える安心感」を作るのが最優先。</p>
+        </article>
+        <article>
+          <h3>2. ビジネス英語の型</h3>
+          <ul>
+            <li>ミーティングでの発言</li>
+            <li>メールの定番フレーズ</li>
+            <li>依頼・報告・相談</li>
+          </ul>
+          <p class="note">型を覚えると応用がしやすい。</p>
+        </article>
+        <article>
+          <h3>3. IT業界の頻出用語</h3>
+          <ul>
+            <li>Requirement / Spec / Deadline</li>
+            <li>Deploy / Release / Rollback</li>
+            <li>Stand-up / Sprint / Backlog</li>
+          </ul>
+          <p class="note">現場でよく耳にする単語からスタート。</p>
+        </article>
+      </section>
+
+      <section class="howto">
+        <h2>操作のしかた（初心者向け）</h2>
+        <ol>
+          <li>このフォルダ内の <strong>index.html</strong> をダブルクリックするとブラウザで開けます。</li>
+          <li>もう少し本格的に見るなら、ターミナルで <code>python -m http.server</code> を実行し、<code>http://localhost:8000</code> を開きます。</li>
+          <li>画面上の「今日の学習プランを見る」や「フラッシュカードを切り替え」を押して動作確認できます。</li>
+        </ol>
+        <p class="note">困ったら「どこまで表示できたか」をメモして教えてくれれば一緒に直します。</p>
+      </section>
+
+      <section class="plan" id="plan">
+        <div>
+          <h2>今日の学習プラン（30分）</h2>
+          <ol>
+            <li><strong>5分:</strong> フラッシュカードで声に出す</li>
+            <li><strong>10分:</strong> Dailyフレーズを3つ使って会話を作る</li>
+            <li><strong>10分:</strong> Businessフレーズをメール風に書く</li>
+            <li><strong>5分:</strong> IT用語を1つ調べて例文を書く</li>
+          </ol>
+        </div>
+        <aside class="tips">
+          <h3>コツ</h3>
+          <p>「完璧に話す」より「伝わる」を意識する。</p>
+          <p>毎日続けられる量に分割する。</p>
+        </aside>
+      </section>
+
+      <section class="cta">
+        <h2>次に作りたい機能は？</h2>
+        <p>単語帳、スピーキング練習、学習ログ…次の実装の候補を決めよう。</p>
+        <div class="cta__options">
+          <button type="button" class="ghost" data-topic="vocab">単語帳を作る</button>
+          <button type="button" class="ghost" data-topic="speaking">発音練習を追加</button>
+          <button type="button" class="ghost" data-topic="log">学習ログを記録</button>
+        </div>
+        <p class="cta__result" id="cta-result">ボタンを押すと次の学習テーマが表示されます。</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>はじめてのプログラミングでも、少しずつ積み上げよう。</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
