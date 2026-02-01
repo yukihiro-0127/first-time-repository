@@ -3,92 +3,351 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>English Buddy - はじめての英語学習サポート</title>
+    <title>LexiCore | Professional English for Global Work</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header class="hero">
-      <div class="hero__content">
-        <p class="hero__eyebrow">はじめてのプログラミングで作る英語学習サイト</p>
-        <h1>English Buddy</h1>
-        <p class="hero__lead">
-          日常会話・ビジネス・IT用語まで、これからの英語学習をまとめてサポート。
-        </p>
-        <div class="hero__actions">
-          <button class="primary" type="button" id="start-plan">今日の学習プランを見る</button>
-          <button class="ghost" type="button" id="shuffle-card">フラッシュカードを切り替え</button>
-        </div>
-      </div>
-      <div class="hero__card" id="flashcard">
-        <p class="card__label" id="card-tag">Daily</p>
-        <h2 id="card-term">Nice to meet you.</h2>
-        <p id="card-meaning">はじめまして。</p>
-        <p class="card__hint" id="card-hint">シーン: 自己紹介</p>
-      </div>
+    <header class="topbar">
+      <div class="logo">LexiCore</div>
+      <nav class="nav">
+        <button class="nav__link" data-target="home">Home</button>
+        <button class="nav__link" data-target="flashcards">Flashcards</button>
+        <button class="nav__link" data-target="quiz">Quiz</button>
+        <button class="nav__link" data-target="progress">Progress</button>
+        <button class="nav__link" data-target="settings">Settings</button>
+      </nav>
+      <div class="topbar__meta" id="user-greeting">Welcome</div>
     </header>
 
     <main>
-      <section class="grid">
-        <article>
-          <h3>1. 日常会話の土台</h3>
-          <ul>
-            <li>朝・昼・夜のあいさつ</li>
-            <li>相づちとリアクション</li>
-            <li>短い自己紹介</li>
-          </ul>
-          <p class="note">まずは「言える安心感」を作るのが最優先。</p>
-        </article>
-        <article>
-          <h3>2. ビジネス英語の型</h3>
-          <ul>
-            <li>ミーティングでの発言</li>
-            <li>メールの定番フレーズ</li>
-            <li>依頼・報告・相談</li>
-          </ul>
-          <p class="note">型を覚えると応用がしやすい。</p>
-        </article>
-        <article>
-          <h3>3. IT業界の頻出用語</h3>
-          <ul>
-            <li>Requirement / Spec / Deadline</li>
-            <li>Deploy / Release / Rollback</li>
-            <li>Stand-up / Sprint / Backlog</li>
-          </ul>
-          <p class="note">現場でよく耳にする単語からスタート。</p>
-        </article>
+      <section class="section hero" id="home">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Professional English for Global Work</p>
+          <h1>Operate with confidence in enterprise English.</h1>
+          <p class="hero__lead">
+            LexiCore builds executive-ready communication skills for meetings, IT projects, and
+            stakeholder alignment — without the fluff.
+          </p>
+          <div class="hero__actions">
+            <button class="primary" data-jump="flashcards">Start Flashcards</button>
+            <button class="ghost" data-jump="quiz">Start Quiz</button>
+          </div>
+          <p class="hero__reminder" id="reminder-banner"></p>
+          <div class="hero__highlights">
+            <div>
+              <h3>Enterprise-ready language</h3>
+              <p>Aligned with consulting, IT, and global delivery expectations.</p>
+            </div>
+            <div>
+              <h3>Real difficulty levels</h3>
+              <p>Levels 1-5 scenarios from daily syncs to executive delivery reviews.</p>
+            </div>
+            <div>
+              <h3>Progress you can trust</h3>
+              <p>Track accuracy, streaks, and per-level mastery with no surprises.</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__panel">
+            <span>Stakeholder Alignment</span>
+            <h2 id="hero-sentence">We need a clear owner for the escalation path.</h2>
+            <div class="tts-row">
+              <button class="tts-button" id="hero-tts" type="button" aria-label="Play audio">
+                👂
+              </button>
+              <span>Play recommended sentence</span>
+            </div>
+            <p>エスカレーションの責任者を明確にする必要があります。</p>
+          </div>
+          <div class="hero__grid"></div>
+        </div>
       </section>
 
-      <section class="plan" id="plan">
-        <div>
-          <h2>今日の学習プラン（30分）</h2>
-          <ol>
-            <li><strong>5分:</strong> フラッシュカードで声に出す</li>
-            <li><strong>10分:</strong> Dailyフレーズを3つ使って会話を作る</li>
-            <li><strong>10分:</strong> Businessフレーズをメール風に書く</li>
-            <li><strong>5分:</strong> IT用語を1つ調べて例文を書く</li>
-          </ol>
+      <section class="section" id="flashcards">
+        <div class="section__header">
+          <div>
+            <p class="section__eyebrow">Flashcards</p>
+            <h2>Structured practice for high-stakes communication</h2>
+            <p>
+              Show the Japanese prompt first. Reveal the English once. Then decide if you
+              mastered it.
+            </p>
+          </div>
+          <div class="level-switch" id="level-switch">
+            <button class="pill" data-level="1">Level 1</button>
+            <button class="pill active" data-level="2">Level 2</button>
+            <button class="pill" data-level="3">Level 3</button>
+            <button class="pill" data-level="4">Level 4</button>
+            <button class="pill" data-level="5">Level 5</button>
+          </div>
         </div>
-        <aside class="tips">
-          <h3>コツ</h3>
-          <p>「完璧に話す」より「伝わる」を意識する。</p>
-          <p>毎日続けられる量に分割する。</p>
-        </aside>
+
+        <div class="flashcard" id="flashcard">
+          <div class="flashcard__meta">
+            <span class="tag" id="card-level">Level 2</span>
+            <span class="context" id="card-context">Context</span>
+            <button class="favorite" id="favorite-toggle" type="button">☆ お気に入り</button>
+          </div>
+          <div class="flashcard__body">
+            <p class="flashcard__jp" id="card-jp"></p>
+            <div class="flashcard__answer hidden" id="card-answer" aria-hidden="true">
+              <p class="flashcard__label">English</p>
+              <div class="flashcard__en-row">
+                <p class="flashcard__en" id="card-en"></p>
+                <button
+                  class="tts-button"
+                  id="flashcard-tts"
+                  type="button"
+                  aria-label="Play audio"
+                  disabled
+                >
+                  👂
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flashcard__actions">
+            <button class="ghost" id="reveal-answer">答えを表示</button>
+            <button class="primary" id="mark-known">覚えた</button>
+            <button class="secondary" id="mark-unknown">まだ</button>
+          </div>
+        </div>
+
+        <div class="flashcard__footer">
+          <div>
+            <p class="hint-label">Hint</p>
+            <p class="hint" id="card-hint"></p>
+          </div>
+          <div class="stats">
+            <div>
+              <p class="stats__label">Total Answers</p>
+              <p class="stats__value" id="flash-total">0</p>
+            </div>
+            <div>
+              <p class="stats__label">Correct</p>
+              <p class="stats__value" id="flash-correct">0</p>
+            </div>
+            <div>
+              <p class="stats__label">Streak</p>
+              <p class="stats__value" id="flash-streak">0</p>
+            </div>
+          </div>
+        </div>
+        <div class="favorites" id="favorites">
+          <div class="favorites__header">
+            <div>
+              <p class="section__eyebrow">Favorites</p>
+              <h3>Saved sentences</h3>
+              <p class="favorites__subtext">Quick access to your starred cards.</p>
+            </div>
+            <span class="favorites__count" id="favorites-count">0</span>
+          </div>
+          <div class="favorites__list" id="favorites-list"></div>
+          <p class="favorites__empty" id="favorites-empty">No favorites yet.</p>
+        </div>
       </section>
 
-      <section class="cta">
-        <h2>次に作りたい機能は？</h2>
-        <p>単語帳、スピーキング練習、学習ログ…次の実装の候補を決めよう。</p>
-        <div class="cta__options">
-          <button type="button" class="ghost" data-topic="vocab">単語帳を作る</button>
-          <button type="button" class="ghost" data-topic="speaking">発音練習を追加</button>
-          <button type="button" class="ghost" data-topic="log">学習ログを記録</button>
+      <section class="section" id="quiz">
+        <div class="section__header">
+          <div>
+            <p class="section__eyebrow">Quiz</p>
+            <h2>Decision test</h2>
+            <p>Choose between a 60-second sprint or a focused 10-question round.</p>
+          </div>
+          <div class="quiz__controls">
+            <label for="quiz-type">Quiz Type</label>
+            <select id="quiz-type">
+              <option value="timed">60 seconds</option>
+              <option value="ten">10 questions</option>
+            </select>
+            <label for="quiz-level">Difficulty</label>
+            <select id="quiz-level">
+              <option value="1">Level 1</option>
+              <option value="2">Level 2</option>
+              <option value="3">Level 3</option>
+              <option value="4">Level 4</option>
+              <option value="5">Level 5</option>
+            </select>
+            <button class="primary" id="start-quiz">Start Quiz</button>
+          </div>
         </div>
-        <p class="cta__result" id="cta-result">ボタンを押すと次の学習テーマが表示されます。</p>
+
+        <div class="quiz" id="quiz-area">
+          <div class="quiz__meta">
+            <div>
+              <p class="stats__label" id="quiz-timer-label">Time</p>
+              <p class="stats__value" id="quiz-timer">60</p>
+            </div>
+            <div>
+              <p class="stats__label">Total Questions</p>
+              <p class="stats__value" id="quiz-total">0</p>
+            </div>
+            <div>
+              <p class="stats__label">Correct</p>
+              <p class="stats__value" id="quiz-correct">0</p>
+            </div>
+          </div>
+          <div class="quiz__prompt">
+            <p class="quiz__label">Japanese</p>
+            <h3 id="quiz-question">Start the quiz to begin.</h3>
+            <div class="tts-row">
+              <button
+                class="tts-button"
+                id="quiz-tts"
+                type="button"
+                aria-label="Play audio"
+                disabled
+              >
+                👂
+              </button>
+              <span>Play English prompt</span>
+            </div>
+          </div>
+          <div class="quiz__options" id="quiz-options"></div>
+        </div>
+
+        <div class="quiz__result hidden" id="quiz-result">
+          <h3>Quiz Result</h3>
+          <p class="result__metric">
+            Total Questions: <span id="result-total">0</span>
+          </p>
+          <p class="result__metric">
+            Correct Answers: <span id="result-correct">0</span>
+          </p>
+          <p class="result__metric">Accuracy: <span id="result-accuracy">0%</span></p>
+          <div class="quiz__result-actions">
+            <button class="primary" id="retry-quiz">Retry</button>
+            <button class="ghost" data-jump="home">Back to Home</button>
+          </div>
+        </div>
+        <div class="quiz__history">
+          <div class="quiz__history-header">
+            <h4>Quiz History (latest 10)</h4>
+            <div class="quiz__history-actions">
+              <button class="ghost" id="quiz-history-prev" type="button">Prev</button>
+              <button class="ghost" id="quiz-history-next" type="button">Next</button>
+            </div>
+          </div>
+          <ul class="quiz__history-list" id="quiz-history-list"></ul>
+          <p class="quiz__history-empty" id="quiz-history-empty">No quiz history yet.</p>
+        </div>
+      </section>
+
+      <section class="section" id="progress">
+        <div class="section__header">
+          <div>
+            <p class="section__eyebrow">Progress</p>
+            <h2>Visibility into your learning momentum</h2>
+            <p>Track answers, accuracy, and streaks across all levels.</p>
+          </div>
+        </div>
+
+        <div class="progress-grid">
+          <div class="progress-card">
+            <h3>Overall Performance</h3>
+            <div class="progress-metrics">
+              <div>
+                <p class="stats__label">Total Answers</p>
+                <p class="stats__value" id="overall-total">0</p>
+              </div>
+              <div>
+                <p class="stats__label">Correct</p>
+                <p class="stats__value" id="overall-correct">0</p>
+              </div>
+              <div>
+                <p class="stats__label">Streak</p>
+                <p class="stats__value" id="overall-streak">0</p>
+              </div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-bar__fill" id="overall-accuracy"></div>
+            </div>
+            <p class="progress-caption" id="overall-accuracy-text">Accuracy 0%</p>
+          </div>
+
+          <div class="progress-card">
+            <h3>Per-Level Mastery</h3>
+            <div class="level-progress" id="level-progress"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="settings">
+        <div class="section__header">
+          <div>
+            <p class="section__eyebrow">Settings</p>
+            <h2>Personal preferences</h2>
+            <p>Your settings are saved locally and persist across sessions.</p>
+          </div>
+        </div>
+
+        <form class="settings" id="settings-form">
+          <label>
+            Name
+            <input type="text" id="user-name" placeholder="Your name" />
+          </label>
+          <label>
+            Learning focus
+            <select id="focus-area">
+              <option value="balanced">Balanced</option>
+              <option value="business">Business communication</option>
+              <option value="it">IT & technical English</option>
+              <option value="leadership">Executive communication</option>
+            </select>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" id="reminder-opt" />
+            Show daily reminder on the home screen
+          </label>
+          <label>
+            Default Level
+            <select id="default-level">
+              <option value="1">Level 1</option>
+              <option value="2">Level 2</option>
+              <option value="3">Level 3</option>
+              <option value="4">Level 4</option>
+              <option value="5">Level 5</option>
+            </select>
+          </label>
+          <label>
+            Category Filter
+            <select id="category-filter"></select>
+          </label>
+          <label>
+            TTS Rate
+            <select id="tts-rate">
+              <option value="0.8">0.8x</option>
+              <option value="1">1.0x</option>
+              <option value="1.2">1.2x</option>
+            </select>
+          </label>
+          <label>
+            TTS Accent
+            <select id="tts-lang">
+              <option value="en-US">English (US)</option>
+              <option value="en-GB">English (UK)</option>
+            </select>
+          </label>
+          <label>
+            TTS Voice
+            <select id="tts-voice"></select>
+          </label>
+          <p class="settings__hint" id="tts-warning"></p>
+          <button class="primary" type="submit">Save Settings</button>
+          <p class="settings__status" id="settings-status">Settings are up to date.</p>
+        </form>
       </section>
     </main>
 
-    <footer>
-      <p>はじめてのプログラミングでも、少しずつ積み上げよう。</p>
+    <footer class="footer">
+      <p>LexiCore — professional English training for global work.</p>
     </footer>
 
     <script src="script.js"></script>
