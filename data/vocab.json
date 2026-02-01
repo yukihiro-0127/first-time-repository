@@ -1,0 +1,304 @@
+{
+  "cards": [
+    {
+      "id": "pun-001",
+      "en": "Our cloud costs are sky-high, so let's bring them down to earth.",
+      "ja": "クラウド費用が“空高く”なっているので、そろそろ“地に足”をつけて見直しましょう。",
+      "level": 1,
+      "category": "Cloud & Platform",
+      "tags": [
+        "budget",
+        "cloud",
+        "pun",
+        "cost"
+      ]
+    },
+    {
+      "id": "pun-002",
+      "en": "This roadmap is off-track—let's put it back on the rails.",
+      "ja": "このロードマップは“脱線”気味なので、レールに戻しましょう。",
+      "level": 1,
+      "category": "Project & Execution",
+      "tags": [
+        "timeline",
+        "alignment",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-003",
+      "en": "We need to cut the scope—it's time to trim the fat, not the muscle.",
+      "ja": "スコープは“脂身”を落として、筋肉は残すイメージで削りましょう。",
+      "level": 1,
+      "category": "Project & Execution",
+      "tags": [
+        "scope",
+        "trade-off",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-004",
+      "en": "Let's keep the meeting short; otherwise it will drag on and on.",
+      "ja": "会議は短めにして、“引きずらない”ようにしましょう。",
+      "level": 1,
+      "category": "Casual but Professional",
+      "tags": [
+        "alignment",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-005",
+      "en": "We need clear ownership; ambiguity is a black hole for action.",
+      "ja": "オーナーを明確にしないと、行動が“ブラックホール”に吸い込まれます。",
+      "level": 1,
+      "category": "Stakeholder Alignment",
+      "tags": [
+        "ownership",
+        "alignment",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-006",
+      "en": "The API keeps timing out—it's telling us time is up.",
+      "ja": "APIのタイムアウトは“時間切れ”のサインです。",
+      "level": 2,
+      "category": "IT Architecture & Systems",
+      "tags": [
+        "risk",
+        "dependency",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-007",
+      "en": "Let's not boil the ocean; a warm cup is enough for now.",
+      "ja": "海を沸かすのではなく、まずは“温かい一杯”で十分です。",
+      "level": 2,
+      "category": "Consulting & Problem Solving",
+      "tags": [
+        "scope",
+        "trade-off",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-008",
+      "en": "Our dependency chain is tangled—time to untie the knots.",
+      "ja": "依存関係が“絡まって”いるので、結び目をほどきましょう。",
+      "level": 2,
+      "category": "Delivery & Operations",
+      "tags": [
+        "dependency",
+        "risk",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-009",
+      "en": "This proposal lacks traction; we need more grip with stakeholders.",
+      "ja": "提案の“グリップ”が弱いので、関係者の握力を上げましょう。",
+      "level": 2,
+      "category": "Stakeholder Alignment",
+      "tags": [
+        "alignment",
+        "stakeholder",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-010",
+      "en": "Let's keep the risk log tight; loose ends become tripwires.",
+      "ja": "リスクログは“引き締めて”、緩い端は“つまずき”になります。",
+      "level": 2,
+      "category": "Risk & Change Management",
+      "tags": [
+        "risk",
+        "mitigation",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-011",
+      "en": "We need a clean handoff; a messy baton drop costs the race.",
+      "ja": "引き継ぎは“バトン”を落とさないように整えましょう。",
+      "level": 3,
+      "category": "Delivery & Operations",
+      "tags": [
+        "handoff",
+        "ownership",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-012",
+      "en": "Our metrics are flat; let's give them some slope to climb.",
+      "ja": "指標が“横ばい”なので、登れる“傾き”を作りましょう。",
+      "level": 3,
+      "category": "Project & Execution",
+      "tags": [
+        "metrics",
+        "timeline",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-013",
+      "en": "The contract language is fuzzy—let's sharpen the edges.",
+      "ja": "契約文言が“ぼやけて”いるので、輪郭を“研ぎ澄まし”ましょう。",
+      "level": 3,
+      "category": "Negotiation & Contract",
+      "tags": [
+        "contract",
+        "risk",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-014",
+      "en": "We can't keep patching; the quilt is falling apart.",
+      "ja": "パッチ当てが続くと“つぎはぎ布団”になります。根本から直しましょう。",
+      "level": 3,
+      "category": "IT Architecture & Systems",
+      "tags": [
+        "quality",
+        "risk",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-015",
+      "en": "This plan is all sizzle, no steak—let's add substance.",
+      "ja": "この計画は“音ばかり”なので、“中身”を足しましょう。",
+      "level": 3,
+      "category": "Executive Communication",
+      "tags": [
+        "alignment",
+        "decision",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-016",
+      "en": "If we keep pushing the deadline, it will push back.",
+      "ja": "締切を“押し続ける”と、こちらも“押し返され”ます。",
+      "level": 4,
+      "category": "Project & Execution",
+      "tags": [
+        "timeline",
+        "risk",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-017",
+      "en": "Our backlog is a parking lot; let's get traffic moving.",
+      "ja": "バックログが“駐車場”化しているので、流れを動かしましょう。",
+      "level": 4,
+      "category": "Delivery & Operations",
+      "tags": [
+        "deliverable",
+        "timeline",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-018",
+      "en": "Security is a seatbelt—it's only obvious when it's missing.",
+      "ja": "セキュリティは“シートベルト”。ないときに痛感します。",
+      "level": 4,
+      "category": "Risk & Change Management",
+      "tags": [
+        "security",
+        "risk",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-019",
+      "en": "We need to stop waterfalling decisions; let's create a stream, not a flood.",
+      "ja": "意思決定は“洪水”ではなく“流れ”にしましょう。",
+      "level": 4,
+      "category": "Executive Communication",
+      "tags": [
+        "decision",
+        "alignment",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-020",
+      "en": "The vendor roadmap is cloudy; we need a forecast, not fog.",
+      "ja": "ベンダーのロードマップが“霧”なので、“予報”を求めましょう。",
+      "level": 4,
+      "category": "Negotiation & Contract",
+      "tags": [
+        "vendor",
+        "dependency",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-021",
+      "en": "Our escalation path is a maze; let's add clear exits.",
+      "ja": "エスカレーション経路が“迷路”なので、出口を明確にしましょう。",
+      "level": 5,
+      "category": "Executive Communication",
+      "tags": [
+        "escalation",
+        "ownership",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-022",
+      "en": "The data pipeline is leaking; we need to plug the gaps.",
+      "ja": "データパイプラインが“漏れて”いるので、穴を塞ぎましょう。",
+      "level": 5,
+      "category": "IT Architecture & Systems",
+      "tags": [
+        "data",
+        "risk",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-023",
+      "en": "If we keep skipping reviews, quality will skip town.",
+      "ja": "レビューを飛ばすと、品質も“飛んで”いきます。",
+      "level": 5,
+      "category": "Delivery & Operations",
+      "tags": [
+        "quality",
+        "risk",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-024",
+      "en": "We need a sharper problem statement; right now it's blunt.",
+      "ja": "課題定義が“鈍い”ので、もっと“切れる”表現にしましょう。",
+      "level": 5,
+      "category": "Consulting & Problem Solving",
+      "tags": [
+        "alignment",
+        "problem",
+        "pun"
+      ]
+    },
+    {
+      "id": "pun-025",
+      "en": "This negotiation is stuck; let's grease the wheels with options.",
+      "ja": "交渉が“固着”しているので、選択肢で“油を差し”ましょう。",
+      "level": 5,
+      "category": "Negotiation & Contract",
+      "tags": [
+        "negotiation",
+        "trade-off",
+        "pun"
+      ]
+    }
+  ]
+}
