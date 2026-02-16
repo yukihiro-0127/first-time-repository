@@ -68,12 +68,12 @@ const loadVocab = async () => {
 };
 
 const getFilteredCards = (level, category) => {
-  // Previously, level/category filters were applied inconsistently between Flashcards and Quiz.
-  // Centralizing the filter here ensures both flows always respect the same settings.
   const cards = dataStore.dataSets[String(level)] || [];
   if (!category || category === 'all') return cards;
   return cards.filter((card) => card.category === category);
 };
+
+const getDisplayLevel = (level) => Number(level) - 2;
 const defaultProgress = {
   totals: { total: 0, correct: 0, streak: 0 },
   levels: {
@@ -426,7 +426,7 @@ const updateProgressUI = () => {
 
   elements.levelProgress.innerHTML = "";
   Object.entries(progress.levels).forEach(([level, stats]) => {
-    const levelName = `Level ${level}`;
+    const levelName = `Level ${getDisplayLevel(level)}`;
     const levelAccuracy = stats.total
       ? Math.round((stats.correct / stats.total) * 100)
       : 0;
@@ -455,6 +455,10 @@ const getCardStats = (cardId) => {
 
 const getWeightedCard = (level) => {
   const cards = getFilteredCards(level, settings.category);
+  return getWeightedCardFromPool(cards);
+};
+
+const getWeightedCardFromPool = (cards) => {
   if (!cards.length) return null;
   const weights = cards.map((card) => {
     const stats = getCardStats(card.id);
@@ -487,7 +491,7 @@ const renderCard = (card) => {
     return;
   }
   state.currentCard = card;
-  elements.cardLevel.textContent = `Level ${state.level}`;
+  elements.cardLevel.textContent = `Level ${getDisplayLevel(state.level)}`;
   elements.cardContext.textContent = card.category;
   elements.cardJp.textContent = card.ja;
   elements.cardEn.textContent = card.en;
@@ -532,12 +536,8 @@ const showNextCard = () => {
     renderCard(cards[0]);
     return;
   }
-  let nextCard = getWeightedCard(state.level);
-  let guard = 0;
-  while (nextCard && nextCard.id === state.currentCard?.id && guard < 5) {
-    nextCard = getWeightedCard(state.level);
-    guard += 1;
-  }
+  const candidates = cards.filter((card) => card.id !== state.currentCard?.id);
+  const nextCard = getWeightedCardFromPool(candidates);
   renderCard(nextCard);
 };
 
